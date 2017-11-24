@@ -1,4 +1,4 @@
-minElevation: 3
-maxElevation: 100
-elevatorMaterial: IRON_BLOCK
-elevatorSound: ENTITY_IRONGOLEM_ATTACK
+minElevation: 3                        #The minimum distance to place valid elevator blocks
+maxElevation: 15                       #The maximum distance to place valid elevator blocks
+elevatorMaterial: IRON_BLOCK           #The block type used for elevators. Solid full-size block materials work best.
+elevatorSound: ENTITY_IRONGOLEM_ATTACK #The sound played when a player uses an elevator.

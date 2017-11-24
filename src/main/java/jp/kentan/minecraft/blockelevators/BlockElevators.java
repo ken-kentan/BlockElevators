@@ -84,7 +84,7 @@ public class BlockElevators extends JavaPlugin implements ElevatorEventListener,
     }
 
     private boolean isElevatorBlock(Block b){
-        return b.getType() == mElevator.MATERIAL && b.getRelative(BlockFace.UP).isEmpty() && b.getRelative(BlockFace.UP, 2).isEmpty();
+        return b.getType() == mElevator.MATERIAL && b.getRelative(BlockFace.UP).getType().isTransparent() && b.getRelative(BlockFace.UP, 2).getType().isTransparent();
     }
 
     @Override

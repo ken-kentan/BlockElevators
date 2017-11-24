@@ -1,0 +1,4 @@
+minElevation: 3
+maxElevation: 100
+elevatorMaterial: IRON_BLOCK
+elevatorSound: ENTITY_IRONGOLEM_ATTACK

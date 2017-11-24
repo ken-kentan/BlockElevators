@@ -1,0 +1,22 @@
+name: BlockElevators
+main: jp.kentan.minecraft.blockelevators.BlockElevators
+version: 1.0.0
+author: ken_kentan
+website: https://ken.kentan.jp
+
+commands:
+  elevator:
+    description: Reload config
+    usage: /<command>
+    permission: elevator.reload
+    permission-message: You don't have <permission>
+
+permissions:
+  elevator.*:
+    description: Gives access to all elevator commands
+    children:
+      elevator.reload: true
+      elevator.use: true
+  elevator.use:
+    default: true
+    description: Allow a player to teleport between elevators

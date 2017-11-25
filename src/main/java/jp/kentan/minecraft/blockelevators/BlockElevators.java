@@ -14,6 +14,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.util.Vector;
 
 public class BlockElevators extends JavaPlugin implements ElevatorEventListener, ConfigUpdateListener {
 
@@ -77,6 +78,10 @@ public class BlockElevators extends JavaPlugin implements ElevatorEventListener,
         if(maxElevation > 0){
             final Location loc = player.getLocation();
             loc.setY(loc.getY() + (mElevator.MAX_ELEVATION - maxElevation + mElevator.MIN_ELEVATION));
+
+            final Vector vel = player.getVelocity();
+            vel.setY(0);
+            player.setVelocity(vel);
 
             player.teleport(loc);
             player.getWorld().playSound(loc, mElevator.SOUND, 1f, 0f);
